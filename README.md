@@ -1,79 +1,79 @@
-## LETS [![Code Health](https://landscape.io/github/osuripple/lets/master/landscape.svg?style=flat)](https://landscape.io/github/osuripple/lets/master)
+# $LETS с Aspire world
 
-- Origin: https://zxq.co/ripple/lets
-- Mirror: https://github.com/osuripple/lets
+- Происхождение: https://zxq.co/ripple/lets
+- Зеркало: https://github.com/osuripple/lets
 
-## Latest Essential Tatoe Server
-This server handles every non real time client feature, so:
-- Ingame scoreboards
-- Score submission
-- Screenshots
-- Replays
-- osu!direct, thanks to [cheesegull](https://github.com/osuripple/cheesegull)
-- Tillerino-like API (partially broken)
-- osu!standard and taiko pp calculation with [oppai-ng](https://github.com/francesco149/oppai-ng), made by Franc[e]sco
-- osu!mania pp calculation with a slightly edited version of [osu-tools](https://github.com/ppy/osu-tools), made by the osu! team
-- catch the beat pp calculation with [catch-the-pp](https://github.com/osuripple/catch-the-pp), made by Sunpy and cythonized by Nyo
+## Последний необходимый сервер Tatoe
+Этот сервер обрабатывает каждую функцию клиента не в реальном времени, поэтому:
+- Внутриигровые табло
+- Представление баллов
+- скриншоты
+- повторы
+- osu! direct, благодаря [cheesegull] (https://github.com/osuripple/cheesegull)
+- Tillerino-подобный API (частично сломанный)
+- osu! standard и Taiko pp для расчета с [oppai-ng] (https://github.com/francesco149/oppai-ng), сделанные Франком [e] sco
+- osu! mania pp расчет с немного отредактированной версией [osu-tools] (https://github.com/ppy/osu-tools), сделанной osu! команда
+- поймать подсчет количества ударов с помощью [catch-the-pp] (https://github.com/osuripple/catch-the-pp), сделанного Sunpy и цитонизированного Nyo
 
-## Requirements
+## Требования
 - Python 3.6
 - Cython
-- C compiler
+- компилятор C
 
-## How to set up LETS
-First of all, initialize and update the submodules
-```
+## Как настроить LETS
+Прежде всего, инициализируйте и обновите подмодули
+`` `
 $ git submodule init && git submodule update
-```
-afterwards, install the required dependencies with pip
-```
-$ pip install -r requirements.txt
-```
-compile all `*.pyx` files to `*.so` or `*.dll` files using `setup.py` (distutils file).
-This compiles `catch-the-pp` as well.
-```
+`` `
+После этого установите необходимые зависимости с помощью pip.
+`` `
+$ pip install -r needs.txt
+`` `
+скомпилируйте все файлы `* .pyx` в файлы` * .so` или `* .dll`, используя` setup.py` (файл distutils).
+Это также компилирует `catch-the-pp`.
+`` `
 $ python3.6 setup.py build_ext --inplace
-```
-then, run LETS once to create the default config file and edit it
-```
+`` `
+затем запустите LETS один раз, чтобы создать файл конфигурации по умолчанию и отредактировать его
+`` `
 $ python3.6 lets.py
 $ nano config.ini
-```
-finally, compile oppai-ng (inside pp/oppai-ng) and osu-tools (inside pp/maniapp-osu-tools).
+`` `
+наконец, скомпилируйте oppai-ng (внутри pp / oppai-ng) и osu-tools (внутри pp / maniapp-osu-tools).
 
 ## tomejerry.py
-`tomejerry.py` is a tool that allows you to calculate pp for specific scores. It's extremely useful to do mass PP recalculations if you mess something up. It uses lets' config and packages, so make sure lets is installed and configured correctly before using it.
-```
-usage: tomejerry.py [-h]
-                    [-r | -z | -i ID | -m MODS | -g GAMEMODE | -u USERID | -b BEATMAPID | -fhd]
-                    [-w WORKERS] [-cs CHUNKSIZE] [-v]
+`tomejerry.py` - это инструмент, который позволяет вам вычислить pp для конкретных результатов. Очень полезно делать массовые пересчеты ПП, если вы что-то напутали. Он использует конфигурации и пакеты let ', поэтому перед его использованием убедитесь, что let установлен и настроен правильно.
+`` `
+использование: tomejerry.py [-h]
+                    [-r | -z | -i ID | -М МОДЫ | -g GAMEMODE | -u USERID | -b BEATMAPID | -fhd]
+                    [-w WORKERS] [-cs CHUNKSIZE] [-v]
 
-pp recalc tool for ripple, new version.
+PP Recalc инструмент для пульсации, новая версия.
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -r, --recalc          calculates pp for all high scores
-  -z, --zero            calculates pp for 0 pp high scores
-  -i ID, --id ID        calculates pp for the score with this score_id
-  -m MODS, --mods MODS  calculates pp for high scores with these mods (flags)
-  -g GAMEMODE, --gamemode GAMEMODE
-                        calculates pp for scores played on this game mode
-                        (std:0, taiko:1, ctb:2, mania:3)
-  -u USERID, --userid USERID
-                        calculates pp for high scores set by a specific user
-                        (user_id)
-  -b BEATMAPID, --beatmapid BEATMAPID
-                        calculates pp for high scores played on a specific
-                        beatmap (beatmap_id)
-  -fhd, --fixstdhd      calculates pp for std hd high scores (14/05/2018 pp
-                        algorithm changes)
-  -w WORKERS, --workers WORKERS
-                        number of workers. 16 by default. Max 32
-  -cs CHUNKSIZE, --chunksize CHUNKSIZE
-                        score chunks size
-  -v, --verbose         verbose/debug mode
-```
+необязательные аргументы:
+  -h, --help показать это справочное сообщение и выйти
+  -r, --recalc вычисляет pp для всех рекордов
+  -z, --zero вычисляет pp для рекордов 0 pp
+  -i ID, --id ID вычисляет pp для счета с этим score_id
+  -m MODS, --mods MODS вычисляет pp для высоких результатов с этими модами (флаги)
+  -g GAMEMODE, --gamemode GAMEMODE
+                        вычисляет pp для очков, сыгранных в этом режиме игры
+                        (стандартный: 0, тайко: 1, ctb: 2, мания: 3)
+  -u USERID, --userid USERID
+                        вычисляет pp для рекордов, установленных конкретным пользователем
+                        (Логин пользователя)
+  -b BEATMAPID, --beatmapid BEATMAPID
+                        вычисляет pp для рекордов, сыгранных на конкретном
+                        beatmap (beatmap_id)
+  -fhd, --fixstdhd вычисляет pp для рекордов std hd (14/05/2018 pp
+                        алгоритм меняется)
+  -W WORKERS, -workers WORKERS
+                        количество работников. 16 по умолчанию. Макс 32
+  -cs CHUNKSIZE, --chunksize CHUNKSIZE
+                        размер кусков
+  -v, --verbose подробный / режим отладки
+`` `
 
-## License
-This project is licensed under the GNU AGPL 3 License.  
-See the "LICENSE" file for more information.  
+## Лицензия
+Этот проект лицензирован под лицензией GNU AGPL 3.
+Смотрите файл "ЛИЦЕНЗИЯ" для получения дополнительной информации.
