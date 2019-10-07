@@ -1,4 +1,4 @@
-# $LETS с Aspire world
+## LETS с Aspire world
 
 - Происхождение: https://zxq.co/ripple/lets
 - Зеркало: https://github.com/osuripple/lets
