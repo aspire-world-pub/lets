@@ -1,0 +1,10 @@
+Linux justdeadboy 4.4.0-159-generic #187-Ubuntu SMP Thu Aug 1 16:28:06 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+gcc
+-std=c89 -pedantic -O3 -fno-strict-aliasing -Wall -ffunction-sections -fdata-sections -g0 -fno-unwind-tables -s -fno-asynchronous-unwind-tables -Wl,--gc-sections
+-lm
+gcc (Ubuntu 5.4.0-6ubuntu1~16.04.11) 5.4.0 20160609
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+x86_64-linux-gnu
