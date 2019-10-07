@@ -9,11 +9,11 @@
 - Представление баллов
 - скриншоты
 - повторы
-- osu! direct, благодаря [cheesegull] (https://github.com/osuripple/cheesegull)
+- osu! direct, благодаря [cheesegull](https://github.com/osuripple/cheesegull)
 - Tillerino-подобный API (частично сломанный)
-- osu! standard и Taiko pp для расчета с [oppai-ng] (https://github.com/francesco149/oppai-ng), сделанные Франком [e] sco
-- osu! mania pp расчет с немного отредактированной версией [osu-tools] (https://github.com/ppy/osu-tools), сделанной osu! команда
-- поймать подсчет количества ударов с помощью [catch-the-pp] (https://github.com/osuripple/catch-the-pp), сделанного Sunpy и цитонизированного Nyo
+- osu! standard и Taiko pp для расчета с [oppai-ng](https://github.com/francesco149/oppai-ng), сделанные Франком [e] sco
+- osu! mania pp расчет с немного отредактированной версией [osu-tools](https://github.com/ppy/osu-tools), сделанной osu! команда
+- поймать подсчет количества ударов с помощью [catch-the-pp](https://github.com/osuripple/catch-the-pp), сделанного Sunpy и цитонизированного Nyo
 
 ## Требования
 - Python 3.6
