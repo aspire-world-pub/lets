@@ -32,11 +32,11 @@ $ pip install -r requirements.txt
 compile all `*.pyx` files to `*.so` or `*.dll` files using `setup.py` (distutils file).
 This compiles `catch-the-pp` as well.
 ```
-$ python3 setup.py build_ext --inplace
+$ python3.6 setup.py build_ext --inplace
 ```
 then, run LETS once to create the default config file and edit it
 ```
-$ python3 lets.py
+$ python3.6 lets.py
 $ nano config.ini
 ```
 finally, compile oppai-ng (inside pp/oppai-ng) and osu-tools (inside pp/maniapp-osu-tools).
